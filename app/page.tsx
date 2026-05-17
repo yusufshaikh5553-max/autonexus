@@ -52,7 +52,7 @@ export default function AutoNexusWebsite() {
           },
 
           body: JSON.stringify({
-            model: "gpt-oss-120b",
+            model: "gemma-3-12b-it",
 
             messages: [
               {
