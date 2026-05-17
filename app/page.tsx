@@ -15,7 +15,6 @@ export default function AutoNexusWebsite() {
 
   const [input, setInput] = useState("");
   const [isTyping, setIsTyping] = useState(false);
-  const [leadCaptured, setLeadCaptured] = useState(false);
 
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
@@ -49,7 +48,7 @@ export default function AutoNexusWebsite() {
           headers: {
             "Content-Type": "application/json",
 
-            Authorization: `Bearer a3104e15-8c5e-45d2-b0cd-47e103ac4063`,
+            Authorization: `Bearer 7e2d4cd9-71cb-42d7-a1d6-52d7e9e26371`,
           },
 
           body: JSON.stringify({
@@ -58,7 +57,6 @@ export default function AutoNexusWebsite() {
             messages: [
               {
                 role: "system",
-
                 content:
                   "You are AutoNexus AI, an assistant for an AI automation agency.",
               },
@@ -96,7 +94,6 @@ export default function AutoNexusWebsite() {
         ...prev,
         {
           role: "assistant",
-
           content:
             "There was an issue connecting to the AI system.",
         },
@@ -120,7 +117,7 @@ export default function AutoNexusWebsite() {
     {
       title: "Instagram & WhatsApp DM Automation",
       description:
-        "Convert incoming messages into qualified leads and booked appointments automatically.",
+        "Convert incoming messages into qualified leads automatically.",
     },
     {
       title: "AI Voice Assistants",
@@ -144,32 +141,46 @@ export default function AutoNexusWebsite() {
       niche: "Dental Clinic",
       title: "Reduced No-Shows By 40%",
       result:
-        "Implemented AI appointment reminders and automated confirmations for a dental clinic.",
+        "Implemented AI appointment reminders and automated confirmations.",
       metrics: ["40% fewer no-shows", "24/7 booking", "3x faster responses"],
     },
     {
       niche: "Real Estate Agency",
       title: "Instant Lead Response System",
       result:
-        "Built AI-powered Instagram and WhatsApp automation for instant replies and lead qualification.",
+        "Built AI-powered Instagram and WhatsApp automation for instant replies.",
       metrics: ["63% faster response", "Higher conversions", "Automated follow-ups"],
     },
     {
       niche: "Fitness Studio",
       title: "Membership Automation Workflow",
       result:
-        "Created onboarding and membership automation systems for a fitness studio.",
+        "Created onboarding and membership automation systems.",
       metrics: ["Saved 15+ hours weekly", "Automated onboarding", "Higher retention"],
     },
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white font-sans">
+    <div className="min-h-screen bg-[#050816] text-white font-sans overflow-hidden">
+
+      {/* Hero Background Glow */}
+      <div className="fixed top-[-200px] left-[-150px] h-[500px] w-[500px] rounded-full bg-cyan-500/20 blur-[120px]" />
+
+      <div className="fixed bottom-[-200px] right-[-150px] h-[500px] w-[500px] rounded-full bg-blue-500/20 blur-[120px]" />
+
       {/* Navbar */}
-      <nav className="sticky top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
+      <nav className="sticky top-0 z-50 border-b border-white/10 bg-black/40 backdrop-blur-xl">
+
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="text-2xl font-black tracking-tight">
-            Auto<span className="text-cyan-400">Nexus</span>
+
+          <div>
+            <div className="text-3xl font-black tracking-tight">
+              Auto<span className="text-cyan-400">Nexus</span>
+            </div>
+
+            <div className="text-[10px] uppercase tracking-[0.3em] text-zinc-500">
+              Powered by Shaikh Industries
+            </div>
           </div>
 
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-300">
@@ -188,106 +199,219 @@ export default function AutoNexusWebsite() {
 
           <a
             href="#contact"
-            className="rounded-xl bg-white text-black px-5 py-2 font-semibold hover:scale-105 transition-transform"
+            className="rounded-2xl bg-white text-black px-6 py-3 font-semibold hover:scale-105 transition-transform"
           >
             Get Started
           </a>
+
         </div>
+
       </nav>
 
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-white/10">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/10 to-cyan-500/20 blur-3xl" />
+      <section className="relative border-b border-white/10">
 
-        <div className="relative max-w-7xl mx-auto px-6 py-28 lg:py-36">
+        <div className="relative max-w-7xl mx-auto px-6 py-32 lg:py-40">
+
           <div className="max-w-4xl">
 
-            <div className="inline-flex items-center rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm backdrop-blur-md mb-6">
-              AI Automation Agency
+            <div className="inline-flex items-center rounded-full border border-cyan-500/20 bg-white/5 px-4 py-2 text-sm backdrop-blur-md mb-6">
+              Premium AI Automation Agency
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-black leading-tight tracking-tight">
+            <h1 className="text-6xl md:text-8xl font-black leading-tight tracking-tight">
               AI That Runs
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
                 Your Business 24/7
               </span>
             </h1>
 
-            <p className="mt-8 text-lg md:text-xl text-zinc-300 leading-relaxed max-w-2xl">
-              AutoNexus helps businesses automate customer support,
-              appointment booking, follow-ups, Instagram DMs, and voice calls using AI.
+            <p className="mt-8 text-xl text-zinc-300 leading-relaxed max-w-2xl">
+              AutoNexus helps businesses automate support,
+              appointment booking, follow-ups, Instagram DMs,
+              and voice calls using AI systems.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
+
               <a
                 href="#contact"
-                className="rounded-2xl bg-white text-black px-7 py-4 font-semibold hover:scale-105 transition-transform"
+                className="rounded-2xl bg-cyan-500 px-8 py-4 font-bold text-black hover:scale-105 transition-transform"
               >
-                Contact Us
+                Start Automating
               </a>
 
               <a
                 href="#services"
-                className="rounded-2xl border border-white/20 px-7 py-4 font-semibold hover:bg-white/10 transition"
+                className="rounded-2xl border border-white/10 bg-white/5 px-8 py-4 font-semibold hover:bg-white/10 transition"
               >
                 Explore Services
               </a>
+
             </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20">
+
+              <div className="rounded-3xl border border-cyan-500/20 bg-white/5 p-8 shadow-[0_0_40px_rgba(34,211,238,0.08)] backdrop-blur-xl">
+                <div className="text-5xl font-black text-cyan-400">
+                  24/7
+                </div>
+
+                <div className="text-zinc-400 mt-3">
+                  AI customer response systems
+                </div>
+              </div>
+
+              <div className="rounded-3xl border border-cyan-500/20 bg-white/5 p-8 shadow-[0_0_40px_rgba(34,211,238,0.08)] backdrop-blur-xl">
+                <div className="text-5xl font-black text-cyan-400">
+                  40%
+                </div>
+
+                <div className="text-zinc-400 mt-3">
+                  Lower no-show rates
+                </div>
+              </div>
+
+              <div className="rounded-3xl border border-cyan-500/20 bg-white/5 p-8 shadow-[0_0_40px_rgba(34,211,238,0.08)] backdrop-blur-xl">
+                <div className="text-5xl font-black text-cyan-400">
+                  10x
+                </div>
+
+                <div className="text-zinc-400 mt-3">
+                  Faster lead conversion
+                </div>
+              </div>
+
+            </div>
+
           </div>
+
         </div>
+
       </section>
 
       {/* Services */}
-      <section id="services" className="max-w-7xl mx-auto px-6 py-24">
-        <div className="mb-14">
+      <section id="services" className="max-w-7xl mx-auto px-6 py-28">
+
+        <div className="mb-16">
+
           <p className="text-cyan-400 uppercase tracking-[0.2em] text-sm mb-3">
             Services
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-black">
-            AI Solutions Built To Scale Businesses
+          <h2 className="text-5xl font-black">
+            AI Systems Built To Scale Businesses
           </h2>
+
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
           {services.map((service, index) => (
             <div
               key={index}
-              className="rounded-3xl border border-white/10 bg-zinc-900/60 p-8 hover:border-cyan-400/40 hover:-translate-y-1 transition-all"
+              className="rounded-3xl border border-cyan-500/20 bg-white/5 p-8 backdrop-blur-xl shadow-[0_0_40px_rgba(34,211,238,0.08)] hover:-translate-y-2 transition-all"
             >
-              <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+              <h3 className="text-2xl font-bold mb-4">
+                {service.title}
+              </h3>
 
               <p className="text-zinc-400 leading-relaxed">
                 {service.description}
               </p>
+
             </div>
           ))}
+
         </div>
+
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="max-w-7xl mx-auto px-6 py-24">
+
+        <div className="rounded-[40px] border border-cyan-500/20 bg-gradient-to-br from-cyan-500/10 to-blue-500/5 p-14 text-center backdrop-blur-xl">
+
+          <p className="text-cyan-400 uppercase tracking-[0.3em] text-sm mb-4">
+            Why Businesses Choose Us
+          </p>
+
+          <h2 className="text-5xl font-black leading-tight max-w-4xl mx-auto">
+            We Build AI Systems That Work While You Sleep
+          </h2>
+
+          <p className="mt-6 text-zinc-400 text-lg max-w-2xl mx-auto leading-relaxed">
+            AutoNexus helps businesses automate support,
+            lead generation, appointment booking, follow-ups,
+            and operations using AI.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-6 mt-14">
+
+            <div className="rounded-3xl bg-black/40 p-8 border border-white/10">
+              <div className="text-5xl font-black text-cyan-400">
+                24/7
+              </div>
+
+              <p className="mt-4 text-zinc-400">
+                AI systems working non-stop
+              </p>
+            </div>
+
+            <div className="rounded-3xl bg-black/40 p-8 border border-white/10">
+              <div className="text-5xl font-black text-cyan-400">
+                10x
+              </div>
+
+              <p className="mt-4 text-zinc-400">
+                Faster customer responses
+              </p>
+            </div>
+
+            <div className="rounded-3xl bg-black/40 p-8 border border-white/10">
+              <div className="text-5xl font-black text-cyan-400">
+                AI
+              </div>
+
+              <p className="mt-4 text-zinc-400">
+                Tailored business automation
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
       </section>
 
       {/* Case Studies */}
       <section
         id="case-studies"
-        className="border-y border-white/10 bg-zinc-950/80"
+        className="border-y border-white/10 bg-black/20 backdrop-blur-xl"
       >
-        <div className="max-w-7xl mx-auto px-6 py-24">
 
-          <div className="mb-14">
+        <div className="max-w-7xl mx-auto px-6 py-28">
+
+          <div className="mb-16">
+
             <p className="text-cyan-400 uppercase tracking-[0.2em] text-sm mb-3">
               Case Studies
             </p>
 
-            <h2 className="text-4xl md:text-5xl font-black">
-              Real Businesses. Real Automation.
+            <h2 className="text-5xl font-black">
+              Real Businesses. Real Results.
             </h2>
+
           </div>
 
           <div className="grid lg:grid-cols-3 gap-6">
+
             {caseStudies.map((study, index) => (
               <div
                 key={index}
-                className="rounded-3xl border border-white/10 bg-black/40 p-8"
+                className="rounded-3xl border border-cyan-500/20 bg-white/5 p-8 backdrop-blur-xl shadow-[0_0_40px_rgba(34,211,238,0.08)]"
               >
+
                 <div className="text-cyan-400 text-sm uppercase tracking-wider mb-4">
                   {study.niche}
                 </div>
@@ -301,6 +425,7 @@ export default function AutoNexusWebsite() {
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-3">
+
                   {study.metrics.map((metric, i) => (
                     <div
                       key={i}
@@ -309,113 +434,149 @@ export default function AutoNexusWebsite() {
                       {metric}
                     </div>
                   ))}
+
                 </div>
+
               </div>
             ))}
+
           </div>
 
         </div>
+
       </section>
 
       {/* Contact */}
       <section
         id="contact"
-        className="border-t border-white/10 bg-gradient-to-b from-zinc-950 to-black"
+        className="max-w-7xl mx-auto px-6 py-28"
       >
-        <div className="max-w-6xl mx-auto px-6 py-24">
 
-          <div className="rounded-3xl border border-white/10 bg-black/40 p-8">
+        <div className="rounded-[40px] border border-cyan-500/20 bg-white/5 p-10 backdrop-blur-xl shadow-[0_0_60px_rgba(34,211,238,0.08)]">
 
-            <div className="grid md:grid-cols-2 gap-10">
+          <div className="grid md:grid-cols-2 gap-12">
 
-              <div>
-                <h2 className="text-4xl font-black mb-4">
-                  Contact AutoNexus
-                </h2>
+            <div>
 
-                <p className="text-zinc-400 leading-relaxed mb-8">
-                  Ready to automate your business with AI?
-                  Send us your details and we’ll contact you.
-                </p>
+              <h2 className="text-5xl font-black mb-4">
+                Contact AutoNexus
+              </h2>
 
-                <div className="space-y-5 text-zinc-300">
-                  <div>
-                    <p className="text-sm text-zinc-500">Email</p>
-                    <p className="text-lg font-semibold">
-                      yusufshaikh5553@gmail.com
-                    </p>
-                  </div>
+              <p className="text-zinc-400 leading-relaxed mb-10 text-lg">
+                Ready to automate your business with AI?
+                Let’s build systems that save time and increase conversions.
+              </p>
 
-                  <div>
-                    <p className="text-sm text-zinc-500">Phone</p>
-                    <p className="text-lg font-semibold">
-                      +91 91674 18571
-                    </p>
-                  </div>
+              <div className="space-y-8 text-zinc-300">
 
-                  <div>
-                    <p className="text-sm text-zinc-500">Response Time</p>
-                    <p className="text-lg font-semibold">
-                      Usually within 1 hour
-                    </p>
-                  </div>
+                <div>
+                  <p className="text-sm text-zinc-500 mb-1">
+                    Email
+                  </p>
+
+                  <p className="text-2xl font-semibold">
+                    yusufshaikh5553@gmail.com
+                  </p>
                 </div>
+
+                <div>
+                  <p className="text-sm text-zinc-500 mb-1">
+                    Phone
+                  </p>
+
+                  <p className="text-2xl font-semibold">
+                    +91 91674 18571
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-sm text-zinc-500 mb-1">
+                    Company
+                  </p>
+
+                  <p className="text-2xl font-semibold">
+                    Shaikh Industries
+                  </p>
+                </div>
+
               </div>
 
-              <form className="space-y-5">
-
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  className="w-full rounded-2xl border border-white/10 bg-black/40 px-5 py-4 text-white outline-none focus:border-cyan-400"
-                />
-
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  className="w-full rounded-2xl border border-white/10 bg-black/40 px-5 py-4 text-white outline-none focus:border-cyan-400"
-                />
-
-                <input
-                  type="tel"
-                  placeholder="Phone Number"
-                  className="w-full rounded-2xl border border-white/10 bg-black/40 px-5 py-4 text-white outline-none focus:border-cyan-400"
-                />
-
-                <textarea
-                  rows={5}
-                  placeholder="Tell us about your business..."
-                  className="w-full rounded-2xl border border-white/10 bg-black/40 px-5 py-4 text-white outline-none focus:border-cyan-400"
-                />
-
-                <button
-                  type="submit"
-                  className="w-full rounded-2xl bg-cyan-500 py-4 font-bold text-black transition hover:bg-cyan-400"
-                >
-                  Send Message
-                </button>
-
-              </form>
-
             </div>
+
+            <form className="space-y-5">
+
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="w-full rounded-2xl border border-white/10 bg-black/40 px-5 py-5 text-white outline-none focus:border-cyan-400"
+              />
+
+              <input
+                type="email"
+                placeholder="Your Email"
+                className="w-full rounded-2xl border border-white/10 bg-black/40 px-5 py-5 text-white outline-none focus:border-cyan-400"
+              />
+
+              <input
+                type="tel"
+                placeholder="Phone Number"
+                className="w-full rounded-2xl border border-white/10 bg-black/40 px-5 py-5 text-white outline-none focus:border-cyan-400"
+              />
+
+              <textarea
+                rows={6}
+                placeholder="Tell us about your business..."
+                className="w-full rounded-2xl border border-white/10 bg-black/40 px-5 py-5 text-white outline-none focus:border-cyan-400"
+              />
+
+              <button
+                type="submit"
+                className="w-full rounded-2xl bg-cyan-500 py-5 font-bold text-black transition hover:bg-cyan-400 hover:scale-[1.01]"
+              >
+                Send Message
+              </button>
+
+            </form>
 
           </div>
 
         </div>
+
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-white/10 py-10 text-center text-zinc-500 text-sm">
-        © 2026 AutoNexus — AI Automation Agency
+      <footer className="border-t border-white/10 bg-black py-12">
+
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+
+          <div>
+
+            <div className="text-3xl font-black">
+              Auto<span className="text-cyan-400">Nexus</span>
+            </div>
+
+            <p className="text-zinc-500 mt-2 text-sm uppercase tracking-[0.2em]">
+              Powered by Shaikh Industries
+            </p>
+
+          </div>
+
+          <div className="text-zinc-500 text-sm">
+            © 2026 AutoNexus. All rights reserved.
+          </div>
+
+        </div>
+
       </footer>
 
-      {/* AI Chat Widget */}
+      {/* Floating AI Chat */}
       <div className="fixed bottom-6 right-6 z-50">
 
         {isChatOpen && (
-          <div className="mb-4 w-[350px] overflow-hidden rounded-3xl border border-white/10 bg-zinc-950 shadow-2xl shadow-cyan-500/20 backdrop-blur-xl">
+          <div className="mb-4 w-[360px] overflow-hidden rounded-3xl border border-cyan-500/20 bg-zinc-950 shadow-2xl shadow-cyan-500/20 backdrop-blur-xl">
 
             <div className="border-b border-white/10 bg-cyan-500 p-4 text-black">
+
               <div className="font-black text-lg">
                 AutoNexus AI
               </div>
@@ -423,6 +584,7 @@ export default function AutoNexusWebsite() {
               <div className="text-sm text-black/70">
                 Usually replies instantly
               </div>
+
             </div>
 
             <div className="h-[350px] overflow-y-auto space-y-4 p-4">
@@ -447,6 +609,7 @@ export default function AutoNexusWebsite() {
               )}
 
               <div ref={messagesEndRef} />
+
             </div>
 
             <div className="flex gap-2 border-t border-white/10 p-4">
@@ -468,14 +631,17 @@ export default function AutoNexusWebsite() {
               </button>
 
             </div>
+
           </div>
         )}
 
         <button
           onClick={() => setIsChatOpen(!isChatOpen)}
-          className="group relative flex items-center gap-3 rounded-full border border-cyan-400/30 bg-cyan-500 px-5 py-4 text-black shadow-2xl shadow-cyan-500/30 transition-all hover:scale-105 hover:bg-cyan-400"
+          className="group relative flex items-center gap-3 rounded-full border border-cyan-400/30 bg-cyan-500 px-6 py-4 text-black shadow-2xl shadow-cyan-500/30 transition-all hover:scale-105 hover:bg-cyan-400"
         >
+
           <div className="text-left">
+
             <div className="text-sm font-black leading-none">
               AI Assistant
             </div>
@@ -483,10 +649,13 @@ export default function AutoNexusWebsite() {
             <div className="text-xs text-black/70">
               Usually replies instantly
             </div>
+
           </div>
+
         </button>
 
       </div>
+
     </div>
   );
 }
